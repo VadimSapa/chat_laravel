@@ -24,7 +24,7 @@ class MessageRepository
         $messages = Message::where('receiver_id', $userId)
             ->whereNull('read_at')
             ->orderBy('id')
-            ->get();
+            ->get(['id', 'message']);
 
         $this->markAsRead($messages->pluck('id')->all());
 
