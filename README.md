@@ -1,6 +1,6 @@
 ## Test task "Socket"
 
-I implemented the functionality for sending messages via SOWET. I used broadcast and reverb.
+Implemented the functionality for sending messages between users in the browser. I used broadcast and reverb.
 
 Console commands:
 php artisan reverb:start - Start the Reverb server
