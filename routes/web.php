@@ -21,9 +21,9 @@ Route::middleware('auth')->group(function () {
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/users', [UserController::class, 'index'])->middleware('auth')->name('users.index');
+    Route::get('/messages/unread', [MessageController::class, 'unread'])->name('unread.message');
     Route::post('/messages/send', [MessageController::class, 'send'])->name('send.message');
     Route::post('/messages/read', [MessageController::class, 'read'])->name('read.message');
-    Route::get('/messages/unread', [MessageController::class, 'unread'])->name('unread.message');
 });
 
 require __DIR__.'/auth.php';
