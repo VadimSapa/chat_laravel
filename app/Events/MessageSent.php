@@ -16,9 +16,9 @@ class MessageSent implements ShouldBroadcast
     /**
      * Create a new event instance.
      */
-    public function __construct(protected Message $message)
-    {
-    }
+    public function __construct(
+        protected Message $message
+    ) {}
 
     /**
      * Get the channels the event should broadcast on.
